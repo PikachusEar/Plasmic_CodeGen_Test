@@ -17,6 +17,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import "@plasmicapp/react-web/lib/plasmic.css";
+import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: eNceDkVszvmjFS7wKy9BUq/projectcss
 import sty from "./PlasmicPageHeader.module.css"; // plasmic-import: gW9zCTHcS85j/css
 
@@ -67,14 +68,44 @@ function PlasmicPageHeader__RenderFunc(props) {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
+        plasmic_antd_5_hostless_css.plasmic_tokens,
         sty.root
       )}
-    />
+    >
+      <div
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(projectcss.all, sty.freeBox)}
+      >
+        <h1
+          data-plasmic-name={"h1"}
+          data-plasmic-override={overrides.h1}
+          className={classNames(
+            projectcss.all,
+            projectcss.h1,
+            projectcss.__wab_text,
+            sty.h1
+          )}
+        >
+          {"Hello World Header!"}
+        </h1>
+      </div>
+      <div
+        data-plasmic-name={"text"}
+        data-plasmic-override={overrides.text}
+        className={classNames(projectcss.all, projectcss.__wab_text, sty.text)}
+      >
+        {"Hello World Text!"}
+      </div>
+    </div>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root", "freeBox", "h1", "text"],
+  freeBox: ["freeBox", "h1"],
+  h1: ["h1"],
+  text: ["text"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -109,6 +140,9 @@ export const PlasmicPageHeader = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    freeBox: makeNodeComponent("freeBox"),
+    h1: makeNodeComponent("h1"),
+    text: makeNodeComponent("text"),
     // Metadata about props expected for PlasmicPageHeader
     internalVariantProps: PlasmicPageHeader__VariantProps,
     internalArgProps: PlasmicPageHeader__ArgProps

@@ -19,7 +19,9 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import PageHeader from "../../PageHeader"; // plasmic-import: gW9zCTHcS85j/component
 import "@plasmicapp/react-web/lib/plasmic.css";
+import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: eNceDkVszvmjFS7wKy9BUq/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: kR264_Rv49qc/css
 
@@ -80,6 +82,7 @@ function PlasmicHomepage__RenderFunc(props) {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
+            plasmic_antd_5_hostless_css.plasmic_tokens,
             sty.root
           )}
         >
@@ -275,6 +278,11 @@ function PlasmicHomepage__RenderFunc(props) {
             >
               {"Hello World!\n"}
             </div>
+            <PageHeader
+              data-plasmic-name={"pageHeader"}
+              data-plasmic-override={overrides.pageHeader}
+              className={classNames("__wab_instance", sty.pageHeader)}
+            />
           </section>
         </div>
       </div>
@@ -283,11 +291,12 @@ function PlasmicHomepage__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "h1", "ol", "link"],
-  section: ["section", "h1", "ol", "link"],
+  root: ["root", "section", "h1", "ol", "link", "pageHeader"],
+  section: ["section", "h1", "ol", "link", "pageHeader"],
   h1: ["h1"],
   ol: ["ol"],
-  link: ["link"]
+  link: ["link"],
+  pageHeader: ["pageHeader"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -326,6 +335,7 @@ export const PlasmicHomepage = Object.assign(
     h1: makeNodeComponent("h1"),
     ol: makeNodeComponent("ol"),
     link: makeNodeComponent("link"),
+    pageHeader: makeNodeComponent("pageHeader"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,
