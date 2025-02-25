@@ -279,9 +279,9 @@ function PlasmicHomepage__RenderFunc(props) {
               {"Hello World!\n"}
             </div>
             <PageHeader
-              data-plasmic-name={"pageHeader"}
-              data-plasmic-override={overrides.pageHeader}
-              className={classNames("__wab_instance", sty.pageHeader)}
+              data-plasmic-name={"abc"}
+              data-plasmic-override={overrides.abc}
+              className={classNames("__wab_instance", sty.abc)}
             />
           </section>
         </div>
@@ -291,12 +291,12 @@ function PlasmicHomepage__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "h1", "ol", "link", "pageHeader"],
-  section: ["section", "h1", "ol", "link", "pageHeader"],
+  root: ["root", "section", "h1", "ol", "link", "abc"],
+  section: ["section", "h1", "ol", "link", "abc"],
   h1: ["h1"],
   ol: ["ol"],
   link: ["link"],
-  pageHeader: ["pageHeader"]
+  abc: ["abc"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -335,7 +335,7 @@ export const PlasmicHomepage = Object.assign(
     h1: makeNodeComponent("h1"),
     ol: makeNodeComponent("ol"),
     link: makeNodeComponent("link"),
-    pageHeader: makeNodeComponent("pageHeader"),
+    abc: makeNodeComponent("abc"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,

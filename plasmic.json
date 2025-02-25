@@ -106,6 +106,59 @@
           "cssFilePath": "plasmic/cms_starter/PlasmicCheckboxGroup.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "TGVyZN6Qf1qo",
+          "name": "AboutUs",
+          "type": "managed",
+          "projectId": "eNceDkVszvmjFS7wKy9BUq",
+          "renderModuleFilePath": "plasmic/cms_starter/PlasmicAboutUs.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about-us.jsx"
+          },
+          "cssFilePath": "plasmic/cms_starter/PlasmicAboutUs.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about-us"
+        },
+        {
+          "id": "lv_ZEXT3JZzV",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "eNceDkVszvmjFS7wKy9BUq",
+          "renderModuleFilePath": "plasmic/cms_starter/PlasmicButton.jsx",
+          "importSpec": {
+            "modulePath": "Button.jsx"
+          },
+          "cssFilePath": "plasmic/cms_starter/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "lL9SoayVyCtn",
+          "name": "OverlayArrow",
+          "type": "managed",
+          "projectId": "eNceDkVszvmjFS7wKy9BUq",
+          "renderModuleFilePath": "plasmic/cms_starter/PlasmicOverlayArrow.jsx",
+          "importSpec": {
+            "modulePath": "OverlayArrow.jsx"
+          },
+          "cssFilePath": "plasmic/cms_starter/PlasmicOverlayArrow.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "rcl36Lh1kyKB",
+          "name": "Popover",
+          "type": "managed",
+          "projectId": "eNceDkVszvmjFS7wKy9BUq",
+          "renderModuleFilePath": "plasmic/cms_starter/PlasmicPopover.jsx",
+          "importSpec": {
+            "modulePath": "Popover.jsx"
+          },
+          "cssFilePath": "plasmic/cms_starter/PlasmicPopover.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -118,9 +171,80 @@
           "id": "PwBcVUJls1-7",
           "name": "MinusIcon",
           "moduleFilePath": "plasmic/cms_starter/icons/PlasmicIcon__Minus.jsx"
+        },
+        {
+          "id": "tEXJnTcaiv9_",
+          "name": "Icon2Icon",
+          "moduleFilePath": "plasmic/cms_starter/icons/PlasmicIcon__Icon2.jsx"
+        },
+        {
+          "id": "N0xxX2WlXWpR",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/cms_starter/icons/PlasmicIcon__Icon.jsx"
+        },
+        {
+          "id": "Nd98W7jxpbzJ",
+          "name": "CircleIcon",
+          "moduleFilePath": "plasmic/cms_starter/icons/PlasmicIcon__Circle.jsx"
+        },
+        {
+          "id": "xbIZeSmoDbb_",
+          "name": "ChevronDownIcon",
+          "moduleFilePath": "plasmic/cms_starter/icons/PlasmicIcon__ChevronDown.jsx"
+        },
+        {
+          "id": "jgpnWHI_U-Yy",
+          "name": "ArrowRightSvgIcon",
+          "moduleFilePath": "plasmic/cms_starter/icons/PlasmicIcon__ArrowRightSvg.jsx"
+        },
+        {
+          "id": "WQJiJBXRqimM",
+          "name": "TriangleFilledIcon",
+          "moduleFilePath": "plasmic/cms_starter/icons/PlasmicIcon__TriangleFilled.jsx"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "id": "NZZJhLRFpYKK",
+          "name": "corinne-kutz-tMI2_-r5Nfo-unsplash.jpg",
+          "filePath": "../public/plasmic/cms_starter/images/corinneKutzTMi2R5NfoUnsplashJpg.jpg"
+        },
+        {
+          "id": "C_t9nF4PEFfy",
+          "name": "brooke-cagle-WHWYBmtn3_0-unsplash.jpg",
+          "filePath": "../public/plasmic/cms_starter/images/brookeCagleWhwyBmtn30UnsplashJpg.jpg"
+        },
+        {
+          "id": "7waTVvfM0Hg7",
+          "name": "about-2.jpg",
+          "filePath": "../public/plasmic/cms_starter/images/about2Jpg.jpg"
+        },
+        {
+          "id": "5dYcFw9IZNv3",
+          "name": "reading-925589_1920.jpg",
+          "filePath": "../public/plasmic/cms_starter/images/reading9255891920Jpg.jpg"
+        },
+        {
+          "id": "vYY0WD3808ug",
+          "name": "parallax-01.jpg",
+          "filePath": "../public/plasmic/cms_starter/images/parallax01Jpg.jpg"
+        },
+        {
+          "id": "EcbIc_xGqX2U",
+          "name": "blog01-390x290.jpg 2",
+          "filePath": "../public/plasmic/cms_starter/images/blog01390X290Jpg2.jpg"
+        },
+        {
+          "id": "_XcD2jWFtRkc",
+          "name": "blog4-390x290.jpg 2",
+          "filePath": "../public/plasmic/cms_starter/images/blog4390X290Jpg2.jpg"
+        },
+        {
+          "id": "iqdeBOVdvZyW",
+          "name": "blog-2-390x290.jpg 2",
+          "filePath": "../public/plasmic/cms_starter/images/blog2390X290Jpg2.jpg"
+        }
+      ],
       "indirect": false,
       "globalContextsFilePath": "plasmic/cms_starter/PlasmicGlobalContextsProvider.jsx",
       "splitsProviderFilePath": "",
@@ -915,7 +1039,8 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
