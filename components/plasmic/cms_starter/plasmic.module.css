@@ -1,6 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700&display=swap");
 
 .plasmic_tokens {
+  --token-1F08wHMb1xCX: 0.25rem;
+  --plasmic-token-size-4: var(--token-1F08wHMb1xCX);
+  --token-0wEog58TphET: #030712;
+  --plasmic-token-basic-text-primary: var(--token-0wEog58TphET);
+  --token-pDfh55xZevM8: Inter;
+  --plasmic-token-sans-serif: var(--token-pDfh55xZevM8);
+  --token-j4Mr_RYuKMtv: 1rem;
+  --plasmic-token-font-md: var(--token-j4Mr_RYuKMtv);
+  --token-CUBjDSNzkmf-: 1.25;
+  --plasmic-token-line-height-md: var(--token-CUBjDSNzkmf-);
+  --token-WLMleTPjfJGx: 0.75rem;
+  --plasmic-token-font-sm: var(--token-WLMleTPjfJGx);
+  --token-omeI3E1jUKRW: 1;
+  --plasmic-token-line-height-sm: var(--token-omeI3E1jUKRW);
+  --token-MBRd7O37Yx2F: 1.25rem;
+  --plasmic-token-font-lg: var(--token-MBRd7O37Yx2F);
+  --token-Ykc6uWttKEye: 1.4;
+  --plasmic-token-line-height-lg: var(--token-Ykc6uWttKEye);
+  --token-qGhc8d-F8L2I: #6b7280;
+  --plasmic-token-basic-text-secondary: var(--token-qGhc8d-F8L2I);
+  --token-e85VM3HvRpO3: #dc2626;
+  --plasmic-token-destructive-destructive: var(--token-e85VM3HvRpO3);
+  --token-KhFZB6IjaTPL: 0.5rem;
+  --plasmic-token-size-8: var(--token-KhFZB6IjaTPL);
+  --token-0dfIpJ46-Kur: 1.25rem;
+  --plasmic-token-size-20: var(--token-0dfIpJ46-Kur);
+  --token-qCtbLi3uMuAM: #9ca3af;
+  --plasmic-token-basic-ring: var(--token-qCtbLi3uMuAM);
+  --token-zw8iJjzE3J33: 0.125rem;
+  --plasmic-token-size-2: var(--token-zw8iJjzE3J33);
+  --token-27zHe5zcYUvd: #2563eb;
+  --plasmic-token-brand-brand: var(--token-27zHe5zcYUvd);
+}
+
+.plasmic_tokens {
   --plsmc-standard-width: 800px;
   --plsmc-wide-width: 1280px;
   --plsmc-viewport-gap: 16px;

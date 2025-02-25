@@ -13,9 +13,12 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import CheckboxGroup from "../../CheckboxGroup"; // plasmic-import: 3-lkUPAuNPl5/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: eNceDkVszvmjFS7wKy9BUq/projectcss
@@ -56,6 +59,42 @@ function PlasmicPageHeader__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "checkboxGroup.value",
+        type: "private",
+        variableType: "array",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "option1.isSelected",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "option2.isSelected",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "option3.isSelected",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
   return (
     <div
       data-plasmic-name={"root"}
@@ -97,15 +136,34 @@ function PlasmicPageHeader__RenderFunc(props) {
       >
         {"Hello World Text!"}
       </div>
+      <CheckboxGroup
+        data-plasmic-name={"checkboxGroup"}
+        data-plasmic-override={overrides.checkboxGroup}
+        className={classNames("__wab_instance", sty.checkboxGroup)}
+        onChange={async (...eventArgs) => {
+          generateStateOnChangeProp($state, ["checkboxGroup", "value"]).apply(
+            null,
+            eventArgs
+          );
+          if (
+            eventArgs.length > 1 &&
+            eventArgs[1] &&
+            eventArgs[1]._plasmic_state_init_
+          ) {
+            return;
+          }
+        }}
+      />
     </div>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "h1", "text"],
+  root: ["root", "freeBox", "h1", "text", "checkboxGroup"],
   freeBox: ["freeBox", "h1"],
   h1: ["h1"],
-  text: ["text"]
+  text: ["text"],
+  checkboxGroup: ["checkboxGroup"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -143,6 +201,7 @@ export const PlasmicPageHeader = Object.assign(
     freeBox: makeNodeComponent("freeBox"),
     h1: makeNodeComponent("h1"),
     text: makeNodeComponent("text"),
+    checkboxGroup: makeNodeComponent("checkboxGroup"),
     // Metadata about props expected for PlasmicPageHeader
     internalVariantProps: PlasmicPageHeader__VariantProps,
     internalArgProps: PlasmicPageHeader__ArgProps
